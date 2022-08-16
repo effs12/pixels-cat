@@ -5,6 +5,7 @@ import {
     CardMedia,
     Typography,
 } from '@mui/material'
+import { ImagePixelated } from "react-pixelate"
 
 class CardItem extends React.Component {
     render(){
@@ -21,19 +22,42 @@ class CardItem extends React.Component {
                     px:3,
                 }}
             >
-                <CardContent sx={{flex:1}}>
-                    <Typography sx={{ fontWeight:'bold' }} variant="body2" align="center" component="h2">
+                <CardContent sx={{flex:1, px : 0, py: 1}}>
+                    <Typography 
+                        fontWeight={'bold'}
+                        variant="body2" 
+                        align="center" 
+                        component="h2"
+                    >
                         {name}
                     </Typography>
                 </CardContent>
                 <CardMedia
                     sx={{ 
-                        border: '4px solid #EFEFEF'
+                        pt :6,
+                        pb :2,
+                        px: 2,
+                        background : '#779DC9',
+                        border: '4px solid #EFEFEF',
+                        position: 'relative',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        backgroundImage: `url('/images/bg/card-pixel-bg.jpg')`,
                     }}
-                    component="img"
-                    image={`https://robohash.org/${id}?set=set4&size=180x180`}
+                    component="div"
                     alt={name}
-                />
+                    align="center"
+                >
+                    <ImagePixelated 
+                        src={`https://robohash.org/${id}?set=set4&size=180x180`} 
+                        fillTransparencyColor={"transparent"} 
+                        pixelSize={5}
+                        width={120}
+                        height={120}
+                    />
+                </CardMedia>
+
                 <CardContent sx={{flex:1}}>
                     <Typography variant="body2" align="center" color="text.secondary">
                         {email}

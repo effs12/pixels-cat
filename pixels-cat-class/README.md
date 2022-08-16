@@ -1,1 +1,1 @@
-# Cat Robohash practice using React Class
+# Pixels Cat practice using React Class
