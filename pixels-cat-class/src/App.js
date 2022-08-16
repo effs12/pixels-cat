@@ -4,6 +4,7 @@ import {
 } from '@mui/material'
 
 import BaseLayout from './modules/layouts/base-layout';
+import CardList from './components/card-list';
 
 class App extends React.Component{
   constructor(){
@@ -29,11 +30,7 @@ class App extends React.Component{
 
     return (
       <BaseLayout>
-        <Box component="section" sx={{ py: 4, height: '1500px' }}>
-        {cats?.map((cat) => (
-            <h1 key={cat.id}>{cat.name}</h1>
-        ))}
-        </Box>
+        <CardList cats={cats}/>
       </BaseLayout>
     )
   }
