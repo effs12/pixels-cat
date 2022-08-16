@@ -4,7 +4,7 @@ import {
     Container,
 } from '@mui/material'
 
-import Banner from '../../components/Banner'
+import Banner from '../../components/banner.component'
 
 class BaseLayout extends React.Component {
     render(){

@@ -4,7 +4,7 @@ import {
 } from '@mui/material'
 
 import BaseLayout from './modules/layouts/base-layout';
-import CardList from './components/card-list';
+import CardList from './components/card-list.component';
 
 class App extends React.Component{
   constructor(){
