@@ -4,6 +4,7 @@ import {
     CardContent,
     CardMedia,
     Typography,
+    Rating,
 } from '@mui/material'
 import { ImagePixelated } from "react-pixelate"
 
@@ -57,11 +58,8 @@ class CardItem extends React.Component {
                         height={120}
                     />
                 </CardMedia>
-
-                <CardContent sx={{flex:1}}>
-                    <Typography variant="body2" align="center" color="text.secondary">
-                        {email}
-                    </Typography>
+                <CardContent sx={{pt: 3, pb:0}} align="center">
+                    <Rating name="half-rating" defaultValue={email.length / 5} precision={0.5} size="large" readOnly/>
                 </CardContent>
             </Card>
         )
