@@ -1,10 +1,7 @@
 import * as React from 'react';
-import {
-  Box,
-} from '@mui/material'
-
 import BaseLayout from './modules/layouts/base-layout';
 import CardList from './components/card-list.component';
+import SearchBox from './components/search-box.component';
 
 class App extends React.Component{
   constructor(){
@@ -30,6 +27,7 @@ class App extends React.Component{
 
     return (
       <BaseLayout>
+        <SearchBox/>
         <CardList cats={cats}/>
       </BaseLayout>
     )
