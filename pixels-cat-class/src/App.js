@@ -8,6 +8,7 @@ class App extends React.Component{
     super();
     this.state = {
       cats : [],
+      searchField : ''
     }
   }
 
@@ -16,19 +17,33 @@ class App extends React.Component{
     .then((response) => response.json())
     .then((users) => this.setState(() => {
       return { cats : users}
-    }, 
-    () => {
-      console.log(this.state)
     }))
   }
 
+  onSearchChange = (e) => {
+    const searchField = e.target.value.toLowerCase();
+    this.setState(() => {
+      return { searchField }
+    })
+  }
+
   render(){
-    const { cats } = this.state;
+    const { cats, searchField } = this.state;
+    const { onSearchChange } = this;
+    
+    const filterCats = cats.filter((cat) => {
+      return cat.name.toLowerCase().includes(searchField)
+    })
 
     return (
       <BaseLayout>
-        <SearchBox/>
-        <CardList cats={cats}/>
+        <SearchBox
+          placeholder="Search Pixels Cat Here..."
+          onChangeHandler={onSearchChange}
+        />
+        <CardList 
+          cats={filterCats}
+        />
       </BaseLayout>
     )
   }

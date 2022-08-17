@@ -8,6 +8,8 @@ import {
 
 class SearchBox extends React.Component {
     render(){
+        const { placeholder, onChangeHandler } = this.props
+
         return(
             <Box component="div">
                 <Grid container justifyContent="center">
@@ -29,7 +31,8 @@ class SearchBox extends React.Component {
                             color="primary"
                             type="search"
                             fullWidth
-                            placeholder="Search Pixels Cat Here..."
+                            placeholder={placeholder}
+                            onChange={onChangeHandler}
                         />
                         </Paper>
                     </Grid>
