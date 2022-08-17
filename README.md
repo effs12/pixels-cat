@@ -1,5 +1,5 @@
 # Pixels Cat
-> Pixel Cat is part of my training in "mastering the basics" using React Class Component and React Functional Component. It is inspired by the Udemy course Practice Building Robohash. It converts the robohash kittens into pixelated textures using React Pixelate and filters the cards with proper filtration using react hooks and functions. (see demo here [https://pixels-cat.vercel.app/])
+> Pixel Cat is part of my training in "mastering the basics" using React Class Component and React Functional Component. It is inspired by the Udemy course Practice Building Robohash. What I did is adding some twist by converting the robohash kittens into pixelated textures using React Pixelate and use the material UI for components. (see demo here [https://pixels-cat.vercel.app/])
 
 ## Tools and Features
 
