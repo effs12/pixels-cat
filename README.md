@@ -20,10 +20,10 @@
 // Install package and dependencies 
 yarn
 
-// Run server
-yarn server
+// Run start
+yarn start
 
-// Server runs on http://localhost:5000
+// App runs on http://localhost:3000/
 ```
 
 ## License
