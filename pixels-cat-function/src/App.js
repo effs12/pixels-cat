@@ -1,6 +1,8 @@
 import * as React from 'react';
 import BaseLayout from './modules/layouts/base-layout';
 
+import CardList from './components/card-list.component';
+
 const App = () => {
   const [cats, setCats] = React.useState([])
 
@@ -10,12 +12,11 @@ const App = () => {
     .then((users) => setCats(users));
   },[])
 
-
   return (
     <BaseLayout>
-    {cats.map((cat) => (
-      <h1 key={cat.id}>{cat.name}</h1>
-    ))}
+      <CardList 
+        cats={cats}
+      />
     </BaseLayout>
   )
 }
