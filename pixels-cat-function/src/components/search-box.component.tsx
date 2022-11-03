@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { ChangeEvent } from 'react'
 import {
     Box,
     Paper,
@@ -6,8 +6,17 @@ import {
     Grid,
 } from '@mui/material'
 
-const SearchBox = (props) => {
-    const { placeholder, onChangeHandler } = props
+const name : string = '123344'
+
+type SearchBoxProps = {
+    placeholder : string;
+    onChangeHandler : (event : ChangeEvent<HTMLInputElement>) => void;
+}
+
+const SearchBox = ({ 
+    placeholder, 
+    onChangeHandler 
+} : SearchBoxProps) => {
 
     return(
         <Box component="div">

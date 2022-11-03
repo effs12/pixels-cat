@@ -4,10 +4,14 @@ import {
     Box,
 } from '@mui/material'
 
+import { Cat } from '../App'
 import Card from './card.component'
 
-const CardList = ({cats}) => {
+type CardListProps = {
+    cats : Cat[];
+}
 
+const CardList = ({ cats } : CardListProps) => {
     return(
         <Box component="section" sx={{ py: 4, minHeight:'500px' }}>
             <Grid container justifyContent="center">
